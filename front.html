@@ -1,22 +1,1000 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>shop menu</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>SHOP MENU</h1><!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FlameBite • Premium Fast Food</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #0a0a0f;
+--surface: #12121a;
+--card: #1a1a24;
+--accent: #ff4d00;
+--accent-glow: #ff6b2b;
+--gold: #ffc107;
+--text: #f5f5f7;
+--muted: #a0a0b0;
+--border: rgba(255,255,255,0.08);
+--radius: 20px;
+--shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Outfit', system-ui, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* Animated background orbs */
+.bg-orbs {
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: 0;
+overflow: hidden;
+}
+.orb {
+position: absolute;
+border-radius: 50%;
+filter: blur(80px);
+opacity: 0.35;
+animation: float 18s ease-in-out infinite;
+}
+.orb-1 {
+width: 420px; height: 420px;
+background: radial-gradient(circle, var(--accent), transparent 70%);
+top: -120px; left: -100px;
+}
+.orb-2 {
+width: 360px; height: 360px;
+background: radial-gradient(circle, #ff00aa, transparent 70%);
+bottom: 10%; right: -80px;
+animation-delay: -6s;
+}
+.orb-3 {
+width: 280px; height: 280px;
+background: radial-gradient(circle, var(--gold), transparent 70%);
+top: 40%; left: 30%;
+animation-delay: -12s;
+}
+@keyframes float {
+0%, 100% { transform: translate(0, 0) scale(1); }
+33% { transform: translate(40px, -30px) scale(1.05); }
+66% { transform: translate(-30px, 20px) scale(0.95); }
+}
+
+/* Navigation */
+header {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+padding: 1.1rem 2rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: rgba(10,10,15,0.75);
+backdrop-filter: blur(16px);
+border-bottom: 1px solid var(--border);
+transition: all 0.3s ease;
+}
+header.scrolled {
+padding: 0.75rem 2rem;
+box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 1.7rem;
+font-weight: 800;
+letter-spacing: -0.5px;
+background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.logo span {
+font-size: 1.4rem;
+}
+
+nav {
+display: flex;
+gap: 2rem;
+align-items: center;
+}
+nav a {
+color: var(--muted);
+text-decoration: none;
+font-weight: 500;
+font-size: 0.95rem;
+position: relative;
+transition: color 0.25s;
+}
+nav a:hover, nav a.active {
+color: #fff;
+}
+nav a::after {
+content: '';
+position: absolute;
+left: 0; bottom: -4px;
+width: 0; height: 2px;
+background: var(--accent);
+transition: width 0.3s ease;
+}
+nav a:hover::after, nav a.active::after {
+width: 100%;
+}
+
+.cart-btn {
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+color: white; 
+07:02 
+border: none;
+padding: 0.6rem 1.25rem;
+border-radius: 50px;
+font-weight: 600;
+font-size: 0.9rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+box-shadow: 0 4px 20px rgba(255,77,0,0.4);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.cart-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 25px rgba(255,77,0,0.55);
+}
+.cart-count {
+background: #fff;
+color: var(--accent);
+width: 22px; height: 22px;
+border-radius: 50%;
+font-size: 0.75rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Hero */
+.hero {
+position: relative;
+z-index: 1;
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 8rem 2rem 4rem;
+max-width: 1300px;
+margin: 0 auto;
+gap: 3rem;
+}
+.hero-content {
+flex: 1;
+max-width: 560px;
+}
+.hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+background: rgba(255,77,0,0.15);
+border: 1px solid rgba(255,77,0,0.35);
+color: var(--accent-glow);
+padding: 0.4rem 1rem;
+border-radius: 50px;
+font-size: 0.85rem;
+font-weight: 600;
+margin-bottom: 1.5rem;
+animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+0%, 100% { box-shadow: 0 0 0 0 rgba(255,77,0,0.4); }
+50% { box-shadow: 0 0 0 10px rgba(255,77,0,0); }
+}
+.hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2.8rem, 6vw, 4.2rem);
+line-height: 1.1;
+font-weight: 800;
+margin-bottom: 1.2rem;
+letter-spacing: -1px;
+}
+.hero h1 .highlight {
+background: linear-gradient(90deg, var(--accent), var(--gold));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.hero p {
+color: var(--muted);
+font-size: 1.15rem;
+margin-bottom: 2.2rem;
+max-width: 480px;
+}
+.hero-actions {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+.btn-primary {
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+color: white;
+border: none;
+padding: 0.95rem 2rem;
+border-radius: 50px;
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+box-shadow: 0 8px 30px rgba(255,77,0,0.4);
+transition: all 0.25s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+}
+.btn-primary:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 35px rgba(255,77,0,0.55);
+}
+.btn-secondary {
+background: transparent;
+color: var(--text);
+border: 1.5px solid var(--border);
+padding: 0.95rem 2rem;
+border-radius: 50px;
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.25s;
+text-decoration: none;
+}
+.btn-secondary:hover {
+border-color: var(--accent);
+color: var(--accent);
+background: rgba(255,77,0,0.08);
+}
+
+.hero-visual {
+flex: 1;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.hero-img-wrap {
+position: relative;
+width: 100%;
+max-width: 480px;
+aspect-ratio: 1;
+}
+.hero-img-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+animation: morph 12s ease-in-out infinite;
+}
+@keyframes morph {
+0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+25% { border-radius: 58% 42% 38% 62% / 45% 55% 45% 55%; } 
+07:02 
+50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+75% { border-radius: 33% 67% 58% 42% / 63% 48% 52% 37%; }
+}
+.floating-badge {
+position: absolute;
+background: var(--card);
+border: 1px solid var(--border);
+padding: 0.75rem 1.1rem;
+border-radius: 16px;
+box-shadow: var(--shadow);
+display: flex;
+align-items: center;
+gap: 0.6rem;
+font-weight: 600;
+font-size: 0.9rem;
+animation: floatBadge 4s ease-in-out infinite;
+}
+.floating-badge.one {
+top: 12%; left: -10%;
+animation-delay: 0s;
+}
+.floating-badge.two {
+bottom: 18%; right: -5%;
+animation-delay: 1.5s;
+}
+@keyframes floatBadge {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-12px); }
+}
+.badge-icon {
+width: 36px; height: 36px;
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+}
+
+/* Sections common */
+section {
+position: relative;
+z-index: 1;
+padding: 5rem 2rem;
+max-width: 1300px;
+margin: 0 auto;
+}
+.section-header {
+text-align: center;
+margin-bottom: 3.5rem;
+}
+.section-header h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2rem, 4vw, 2.8rem);
+font-weight: 800;
+margin-bottom: 0.75rem;
+}
+.section-header p {
+color: var(--muted);
+font-size: 1.1rem;
+max-width: 520px;
+margin: 0 auto;
+}
+
+/* Filter tabs */
+.filter-tabs {
+display: flex;
+justify-content: center;
+gap: 0.75rem;
+flex-wrap: wrap;
+margin-bottom: 2.5rem;
+}
+.filter-btn {
+background: var(--card);
+border: 1px solid var(--border);
+color: var(--muted);
+padding: 0.55rem 1.3rem;
+border-radius: 50px;
+font-weight: 500;
+font-size: 0.9rem;
+cursor: pointer;
+transition: all 0.25s;
+}
+.filter-btn:hover, .filter-btn.active {
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+color: white;
+border-color: transparent;
+box-shadow: 0 4px 18px rgba(255,77,0,0.35);
+}
+
+/* Menu Grid */
+.menu-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 1.75rem;
+}
+.menu-card {
+background: var(--card);
+border-radius: var(--radius);
+overflow: hidden;
+border: 1px solid var(--border);
+transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+position: relative;
+opacity: 0;
+transform: translateY(30px);
+}
+.menu-card.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.menu-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+border-color: rgba(255,77,0,0.3);
+}
+.card-img {
+position: relative;
+height: 200px;
+overflow: hidden;
+}
+.card-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+.menu-card:hover .card-img img {
+transform: scale(1.08);
+}
+.price-tag {
+position: absolute;
+top: 14px;
+right: 14px;
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+color: white;
+font-weight: 700;
+font-size: 0.95rem;
+padding: 0.4rem 0.9rem;
+border-radius: 50px;
+box-shadow: 0 4px 15px rgba(255,77,0,0.45);
+z-index: 2;
+}
+.card-body {
+padding: 1.35rem 1.4rem 1.5rem;
+}
+.card-category {
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: var(--accent); 
+07:02 
+font-weight: 600;
+margin-bottom: 0.35rem;
+}
+.card-title {
+font-size: 1.25rem;
+font-weight: 700;
+margin-bottom: 0.45rem;
+}
+.card-desc {
+color: var(--muted);
+font-size: 0.9rem;
+margin-bottom: 1.15rem;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.card-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.add-btn {
+background: rgba(255,77,0,0.12);
+color: var(--accent);
+border: 1px solid rgba(255,77,0,0.3);
+padding: 0.5rem 1.1rem;
+border-radius: 50px;
+font-weight: 600;
+font-size: 0.85rem;
+cursor: pointer;
+transition: all 0.25s;
+display: flex;
+align-items: center;
+gap: 0.35rem;
+}
+.add-btn:hover {
+background: var(--accent);
+color: white;
+border-color: transparent;
+}
+.rating {
+display: flex;
+align-items: center;
+gap: 0.3rem;
+font-size: 0.85rem;
+color: var(--gold);
+font-weight: 600;
+}
+
+/* Contact section */
+.contact-section {
+background: linear-gradient(180deg, transparent, rgba(255,77,0,0.04));
+}
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+align-items: start;
+}
+.contact-info h3 {
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+font-weight: 700;
+}
+.info-item {
+display: flex;
+gap: 1rem;
+margin-bottom: 1.4rem;
+align-items: flex-start;
+}
+.info-icon {
+width: 44px; height: 44px;
+background: rgba(255,77,0,0.12);
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+.info-text h4 {
+font-size: 0.95rem;
+font-weight: 600;
+margin-bottom: 0.2rem;
+}
+.info-text p, .info-text a {
+color: var(--muted);
+font-size: 0.95rem;
+text-decoration: none;
+transition: color 0.2s;
+}
+.info-text a:hover {
+color: var(--accent);
+}
+
+.contact-form {
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+padding: 2rem;
+}
+.contact-form h3 {
+font-size: 1.35rem;
+margin-bottom: 1.5rem;
+font-weight: 700;
+}
+.form-group {
+margin-bottom: 1.2rem;
+}
+.form-group label {
+display: block;
+font-size: 0.85rem;
+font-weight: 500;
+margin-bottom: 0.4rem;
+color: var(--muted);
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 0.85rem 1.1rem;
+color: var(--text);
+font-family: inherit;
+font-size: 0.95rem;
+transition: border-color 0.25s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--accent);
+}
+.form-group textarea {
+resize: vertical;
+min-height: 110px;
+}
+.submit-btn {
+width: 100%;
+background: linear-gradient(135deg, var(--accent), #ff2a00);
+color: white;
+border: none;
+padding: 0.95rem;
+border-radius: 12px;
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.25s;
+margin-top: 0.5rem;
+}
+.submit-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(255,77,0,0.4);
+}
+
+/* Footer */
+footer {
+position: relative;
+z-index: 1;
+background: #08080c;
+border-top: 1px solid var(--border);
+padding: 3.5rem 2rem 2rem; 
+07:02 
+}
+.footer-content {
+max-width: 1300px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1.5fr 1fr 1fr 1fr;
+gap: 2.5rem;
+margin-bottom: 2.5rem;
+}
+.footer-brand .logo {
+margin-bottom: 1rem;
+font-size: 1.5rem;
+}
+.footer-brand p {
+color: var(--muted);
+font-size: 0.95rem;
+max-width: 280px;
+margin-bottom: 1.2rem;
+}
+.socials {
+display: flex;
+gap: 0.75rem;
+}
+.social-link {
+width: 40px; height: 40px;
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--muted);
+text-decoration: none;
+transition: all 0.25s;
+font-size: 1.1rem;
+}
+.social-link:hover {
+background: var(--accent);
+color: white;
+border-color: transparent;
+}
+.footer-col h4 {
+font-size: 1rem;
+font-weight: 700;
+margin-bottom: 1.1rem;
+}
+.footer-col ul {
+list-style: none;
+}
+.footer-col li {
+margin-bottom: 0.6rem;
+}
+.footer-col a {
+color: var(--muted);
+text-decoration: none;
+font-size: 0.95rem;
+transition: color 0.2s;
+}
+.footer-col a:hover {
+color: var(--accent);
+}
+.footer-bottom {
+max-width: 1300px;
+margin: 0 auto;
+padding-top: 1.75rem;
+border-top: 1px solid var(--border);
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 1rem;
+color: var(--muted);
+font-size: 0.9rem;
+}
+.footer-email {
+color: var(--accent);
+font-weight: 600;
+text-decoration: none;
+}
+.footer-email:hover {
+text-decoration: underline;
+}
+
+/* Toast notification */
+.toast {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+background: var(--card);
+border: 1px solid rgba(255,77,0,0.4);
+color: white;
+padding: 1rem 1.4rem;
+border-radius: 14px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+display: flex;
+align-items: center;
+gap: 0.75rem;
+z-index: 200;
+transform: translateY(120px);
+opacity: 0;
+transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.toast.show {
+transform: translateY(0);
+opacity: 1;
+}
+.toast-icon {
+width: 32px; height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Mobile menu */
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+color: white;
+font-size: 1.6rem;
+cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+.hero {
+flex-direction: column;
+text-align: center;
+padding-top: 7rem;
+}
+.hero-content {
+max-width: 100%;
+}
+.hero p {
+margin-left: auto;
+margin-right: auto;
+}
+.hero-actions {
+justify-content: center;
+}
+.hero-visual {
+max-width: 380px;
+}
+.floating-badge.one { left: 0; }
+.floating-badge.two { right: 0; }
+.contact-grid {
+grid-template-columns: 1fr;
+}
+.footer-content {
+grid-template-columns: 1fr 1fr;
+}
+}
+@media (max-width: 680px) {
+header {
+padding: 1rem 1.25rem;
+}
+nav {
+display: none;
+position: absolute;
+top: 100%;
+left: 0; right: 0;
+background: rgba(10,10,15,0.97);
+flex-direction: column;
+padding: 1.5rem;
+gap: 1.2rem;
+border-bottom: 1px solid var(--border); 
+07:02 
+}
+nav.open {
+display: flex;
+}
+.menu-toggle {
+display: block;
+}
+.cart-btn span:not(.cart-count) {
+display: none;
+}
+section {
+padding: 3.5rem 1.25rem;
+}
+.footer-content {
+grid-template-columns: 1fr;
+}
+.footer-bottom {
+flex-direction: column;
+text-align: center;
+}
+}
+</style>
+</head>
+<body>
+<!-- Background orbs -->
+<div class="bg-orbs">
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+</div>
+
+<!-- Header -->
+<header id="header">
+<div class="logo">
+<span>🔥</span> FlameBite
+</div>
+<nav id="nav">
+<a href="#home" class="active">Home</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+<div style="display:flex;align-items:center;gap:1rem;">
+<button class="cart-btn" id="cartBtn">
+🛒 <span>Cart</span>
+<span class="cart-count" id="cartCount">0</span>
+</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="hero-badge">🔥 Hottest Deals Today</div>
+<h1>Crave-Worthy<br><span class="highlight">Fast Food</span><br>Elevated</h1>
+<p>Bold flavors, premium ingredients, and lightning-fast service. Experience fast food the way it was meant to be — delicious, stylish, and unforgettable.</p>
+<div class="hero-actions">
+<a href="#menu" class="btn-primary">Explore Menu →</a>
+<a href="#contact" class="btn-secondary">Order Now</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-img-wrap">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80" alt="Signature Burger" />
+<div class="floating-badge one">
+<div class="badge-icon">⭐</div>
+<div>
+<div style="font-size:0.75rem;color:var(--muted);">Rated</div>
+<div>4.9 / 5</div>
+</div>
+</div>
+<div class="floating-badge two">
+<div class="badge-icon">🚚</div>
+<div>
+<div style="font-size:0.75rem;color:var(--muted);">Delivery</div>
+<div>15–25 min</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Menu -->
+<section id="menu">
+<div class="section-header">
+<h2>Our Signature Menu</h2>
+<p>Handcrafted with passion. Every bite tells a story of bold spices and premium quality.</p>
+</div>
+
+<div class="filter-tabs">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="burgers">Burgers</button>
+<button class="filter-btn" data-filter="sides">Sides</button>
+<button class="filter-btn" data-filter="drinks">Drinks</button>
+<button class="filter-btn" data-filter="desserts">Desserts</button>
+</div>
+
+<div class="menu-grid" id="menuGrid">
+<!-- Cards injected by JS -->
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+<div class="section-header">
+<h2>Get In Touch</h2>
+<p>Have a question, special request, or just want to say hi? We’d love to hear from you.</p>
+</div>
+
+<div class="contact-grid">
+<div class="contact-info">
+<h3>Contact Information</h3>
+<div class="info-item">
+<div class="info-icon">📍</div>
+<div class="info-text">
+<h4>Visit Us</h4>
+<p>No 4 New Site Estate Lugbe Airport Road<br>FCT Abuja NIGERAI</p>
+</div>
+</div>
+<div class="info-item">
+<div class="info-icon">📞</div> 
+07:02 
+<div class="info-text">
+<h4>Call Us</h4>
+<p><a href="tel:+2348061765854">+2348061765854
+</a></p>
+</div>
+</div>
+<div class="info-item">
+<div class="info-icon">✉️</div>
+<div class="info-text">
+<h4>Email Us</h4>
+<p><a href="mailto:yabdulkareem114@gmail.com">yabdulkareem114@gmail.com</a></p>
+</div>
+</div>
+<div class="info-item">
+<div class="info-icon">🕒</div>
+<div class="info-text">
+<h4>Opening Hours</h4>
+<p>Mon – Sun: 10:00 AM – 11:00 PM</p>
+</div>
+</div>
+</div>
+
+<div class="contact-form">
+<h3>Send a Message</h3>
+<form id="contactForm">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" placeholder="John Doe" required />
+</div>
+<div class="form-group">
+<label for="email">Your Email</label>
+<input type="email" id="email" name="email" placeholder="you@example.com" required />
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Tell us what you're craving..." required></textarea>
+</div>
+<button type="submit" class="submit-btn">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-content">
+<div class="footer-brand">
+<div class="logo"><span>🔥</span> FlameBite</div>
+<p>Premium fast food with attitude. Bold flavors, fresh ingredients, unforgettable experiences.</p>
+<div class="socials">
+<a href="#" class="social-link" aria-label="Instagram">📷</a>
+<a href="#" class="social-link" aria-label="Twitter">🐦</a>
+<a href="#" class="social-link" aria-label="Facebook">📘</a>
+<a href="#" class="social-link" aria-label="TikTok">🎵</a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Explore</h4>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Support</h4>
+<ul>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Delivery Info</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:yabdulkareem114@gmail.com">yabdulkareem114@gmail.com</a></li>
+<li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+<li>42 Flame Street, City Center</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 FlameBite. All rights reserved.</p>
+<p>Contact: <a href="mailto:yabdulkareem114@gmail.com" class="footer-email">yabdulkareem114@gmail.com</a></p>
+</div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+<div class="toast-icon">✓</div>
+<span id="toastMsg">Added to cart!</span>
+</div>
+
+</body>
+</html> 
