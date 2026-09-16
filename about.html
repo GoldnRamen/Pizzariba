@@ -5,30 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pizza-website/style.css">
+    <script src="/components.js" defer></script>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Pizza<span>riba</span></div>
-
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" class="active">About Us</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-        <a href="#" class="order-btn">Order Now</a>
-    </nav>
+    <pizza-header></pizza-header>
 
 
     <!-- Hero Section -->
     <section class="hero">
 
         <div class="hero-text">
-            <p class="small-title">WELCOME TO CRUST & SLICE</p>
+            <p class="small-title">WELCOME TO CRUST & SLICE</p>            
 
             <h1>Made With Love,<br>Served With <span>Flavor.</span></h1>
 
@@ -41,7 +32,7 @@
         </div>
 
         <div class="hero-image">
-            <img src="pizza.jpg" alt="Fresh pizza">
+            <img src="pizza-website/pizza.jpg" alt="Fresh pizza">
         </div>
 
     </section>
@@ -51,7 +42,7 @@
     <section class="about">
 
         <div class="about-image">
-            <img src="pizza-chef.jpg" alt="Pizza being prepared">
+            <img src="pizza-website/pizza-chef.jpg" alt="Pizza being prepared">
         </div>
 
         <div class="about-text">
@@ -132,13 +123,7 @@
 
 
     <!-- Footer -->
-    <footer>
-        <div class="logo">Pizza<span>riba</span></div>
-
-        <p>Fresh pizza. Great moments.</p>
-
-        
-    </footer>
+    <pizza-footer></pizza-footer>
 
 </body>
 </html>
