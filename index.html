@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Bella | Authentic Hand-Crafted Pizza</title>
+    <script src="components.js" defer></script>
     <style>
         /* CSS Reset & General Styles */
         * {
@@ -277,19 +278,7 @@
 <body>
 
     <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">Pizza <span>Bella</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#menu" class="btn-order">Order Online</a>
-        </nav>
-    </header>
-
+    <pizza-header></pizza-header>    
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -361,29 +350,6 @@
     </section>
 
     <!-- Footer / Contact Section -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>Pizza Bella</h3>
-                <p>Serving the best authentic wood-fired pizzas in town.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Opening Hours</h3>
-                <p>Mon - Thu: 11:00 AM - 10:00 PM</p>
-                <p>Fri - Sat: 11:00 AM - 11:30 PM</p>
-                <p>Sun: 12:00 PM - 9:30 PM</p>
-            </div>
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <p>📍 123 Main Street, Foodville</p>
-                <p>📞 (555) 123-4567</p>
-                <p>✉️ info@pizzabella.com</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2026 Pizza Bella. All rights reserved.</p>
-        </div>
-    </footer>
-
+    <pizza-footer></pizza-footer>
 </body>
 </html>
