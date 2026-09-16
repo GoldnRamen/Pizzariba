@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<script src="components.js" defer></script>
+<link rel="stylesheet" href="style.css">
 <style>
 :root {
 --bg: #0a0a0f;
@@ -146,7 +148,6 @@ width: 100%;
 .cart-btn {
 background: linear-gradient(135deg, var(--accent), #ff2a00);
 color: white; 
-07:02 
 border: none;
 padding: 0.6rem 1.25rem;
 border-radius: 50px;
@@ -296,7 +297,6 @@ animation: morph 12s ease-in-out infinite;
 @keyframes morph {
 0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 25% { border-radius: 58% 42% 38% 62% / 45% 55% 45% 55%; } 
-07:02 
 50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
 75% { border-radius: 33% 67% 58% 42% / 63% 48% 52% 37%; }
 }
@@ -447,9 +447,8 @@ font-size: 0.75rem;
 text-transform: uppercase;
 letter-spacing: 1px;
 color: var(--accent); 
-07:02 
-font-weight: 600;}
-margin-bottom: {0.35rem;
+font-weight: 600;
+margin-bottom: 0.35rem;
 }
 .card-title {
 font-size: 1.25rem;
@@ -611,7 +610,6 @@ z-index: 1;
 background: #08080c;
 border-top: 1px solid var(--border);
 padding: 3.5rem 2rem 2rem; 
-07:02 
 }
 .footer-content {
 max-width: 1300px;
@@ -812,7 +810,7 @@ text-align: center;
 </div>
 
 <!-- Header -->
-
+<pizza-header></pizza-header>
 <!-- Hero -->
 <section class="hero" id="home">
 <div class="hero-content">
@@ -1165,4 +1163,6 @@ document.getElementById('cartBtn').addEventListener('click', () => {})
     }
     </script>
 </body>
+
+<pizza-footer></pizza-footer>
 </html>

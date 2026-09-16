@@ -6,7 +6,7 @@ class PizzaHeader extends HTMLElement {
                 <a href="index.html" class="logo">Pizzaribba</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="front.html">Menu</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
