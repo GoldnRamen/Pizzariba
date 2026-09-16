@@ -3,7 +3,7 @@ class PizzaHeader extends HTMLElement {
         this.innerHTML = `
         <header>
             <nav class="navbar">
-                <a href="index.html" class="logo">Pizzaribba</span></a>
+                <a href="index.html" class="logo">Pizzaribba</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
