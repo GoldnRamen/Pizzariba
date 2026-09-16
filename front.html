@@ -998,115 +998,114 @@ text-align: center;
 <script>
 // Menu data
 const menuItems = [
-{
-id: 1,
-name: "Flame Smash Burger",
-category: "burgers",
-desc: "Double smashed beef, melted cheddar, caramelized onions & secret flame sauce.",
-price: 12.99,
-rating: 4.9,
-img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
-},
-{
-id: 2,
-name: "Crispy Chicken Deluxe",
-category: "burgers",
-desc: "Crispy fried chicken, spicy mayo, lettuce, pickles on a toasted brioche bun.", 
-07:02 
-price: 11.49,
-rating: 4.8,
-img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&q=80"
-},
-{
-id: 3,
-name: "Truffle Fries",
-category: "sides",
-desc: "Hand-cut fries tossed in truffle oil, parmesan & fresh herbs.",
-price: 6.99,
-rating: 4.7,
-img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80"
-},
-{
-id: 4,
-name: "Loaded Nacho Fries",
-category: "sides",
-desc: "Fries smothered in cheese sauce, jalapeños, sour cream & crispy bacon.",
-price: 8.49,
-rating: 4.6,
-img: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=80"
-},
-{
-id: 5,
-name: "Classic Cola",
-category: "drinks",
-desc: "Ice-cold classic cola. The perfect partner for every meal.",
-price: 2.99,
-rating: 4.5,
-img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&q=80"
-},
-{
-id: 6,
-name: "Berry Blast Shake",
-category: "drinks",
-desc: "Creamy vanilla ice cream blended with mixed berries & a hint of mint.",
-price: 5.99,
-rating: 4.8,
-img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80"
-},
-{
-id: 7,
-name: "Molten Chocolate Cake",
-category: "desserts",
-desc: "Warm chocolate lava cake with a gooey center, served with vanilla ice cream.",
-price: 7.49,
-rating: 4.9,
-img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80"
-},
-{
-id: 8,
-name: "BBQ Bacon Burger",
-category: "burgers",
-desc: "Juicy beef patty, crispy bacon, cheddar, onion rings & smoky BBQ glaze.",
-price: 13.99,
-rating: 4.9,
-img: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80"
-},
-{
-id: 9,
-name: "Onion Rings",
-category: "sides",
-desc: "Golden, crispy beer-battered onion rings with house dipping sauce.",
-price: 5.49,
-rating: 4.6,
-img: "https://images.unsplash.com/photo-1639024471283-035266d1b3f2?w=600&q=80"
-},
-{
-id: 10,
-name: "Iced Lemonade",
-category: "drinks",
-desc: "Freshly squeezed lemonade over ice with a touch of mint.",
-price: 3.49,
-rating: 4.7,
-img: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80"
-},
-{
-id: 11,
-name: "Cookie Dough Sundae",
-category: "desserts",
-desc: "Vanilla ice cream loaded with cookie dough chunks & chocolate drizzle.",
-price: 6.99,
-rating: 4.8,
-img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80"
-},
-{
-id: 12,
-name: "Spicy Wings (8pc)",
-category: "sides",
-desc: "Crispy chicken wings tossed in our signature hot sauce. Extra napkins recommended.",
-price: 9.99,
-rating: 4.7,
-img: "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=600&q=80"
-}
+  {
+    id: 1,
+    name: "Flame Smash Burger",
+    category: "burgers",
+    desc: "Double smashed beef, melted cheddar, caramelized onions & secret flame sauce.",
+    price: 12.99,
+    rating: 4.9,
+    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+  },
+  {
+    id: 2,
+    name: "Crispy Chicken Deluxe",
+    category: "burgers",
+    desc: "Crispy fried chicken, spicy mayo, lettuce, pickles on a toasted brioche bun.", 
+    price: 11.49,
+    rating: 4.8,
+    img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&q=80"
+  },
+  {
+    id: 3,
+    name: "Truffle Fries",
+    category: "sides",
+    desc: "Hand-cut fries tossed in truffle oil, parmesan & fresh herbs.",
+    price: 6.99,
+    rating: 4.7,
+    img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80"
+  },
+  {
+    id: 4,
+    name: "Loaded Nacho Fries",
+    category: "sides",
+    desc: "Fries smothered in cheese sauce, jalapeños, sour cream & crispy bacon.",
+    price: 8.49,
+    rating: 4.6,
+    img: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=80"
+  },
+  {
+    id: 5,
+    name: "Classic Cola",
+    category: "drinks",
+    desc: "Ice-cold classic cola. The perfect partner for every meal.",
+    price: 2.99,
+    rating: 4.5,
+    img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&q=80"
+  },
+  {
+    id: 6,
+    name: "Berry Blast Shake",
+    category: "drinks",
+    desc: "Creamy vanilla ice cream blended with mixed berries & a hint of mint.",
+    price: 5.99,
+    rating: 4.8,
+    img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80"
+  },
+  {
+    id: 7,
+    name: "Molten Chocolate Cake",
+    category: "desserts",
+    desc: "Warm chocolate lava cake with a gooey center, served with vanilla ice cream.",
+    price: 7.49,
+    rating: 4.9,
+    img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80"
+  },
+  {
+    id: 8,
+    name: "BBQ Bacon Burger",
+    category: "burgers",
+    desc: "Juicy beef patty, crispy bacon, cheddar, onion rings & smoky BBQ glaze.",
+    price: 13.99,
+    rating: 4.9,
+    img: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80"
+  },
+  {
+    id: 9,
+    name: "Onion Rings",
+    category: "sides",
+    desc: "Golden, crispy beer-battered onion rings with house dipping sauce.",
+    price: 5.49,
+    rating: 4.6,
+    img: "https://images.unsplash.com/photo-1639024471283-035266d1b3f2?w=600&q=80"
+  },
+  {
+    id: 10,
+    name: "Iced Lemonade",
+    category: "drinks",
+    desc: "Freshly squeezed lemonade over ice with a touch of mint.",
+    price: 3.49,
+    rating: 4.7,
+    img: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80"
+  },
+  {
+    id: 11,
+    name: "Cookie Dough Sundae",
+    category: "desserts",
+    desc: "Vanilla ice cream loaded with cookie dough chunks & chocolate drizzle.",
+    price: 6.99,
+    rating: 4.8,
+    img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80"
+  },
+  {
+    id: 12,
+    name: "Spicy Wings (8pc)",
+    category: "sides",
+    desc: "Crispy chicken wings tossed in our signature hot sauce. Extra napkins recommended.",
+    price: 9.99,
+    rating: 4.7,
+    img: "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=600&q=80"
+  }
 ];
 
 // State
@@ -1124,112 +1123,107 @@ const nav = document.getElementById('nav');
 
 // Render menu cards
 function renderMenu(filter = 'all') {
-const items = filter === 'all' ? menuItems : menuItems.filter(i => i.category === filter); 
-07:02 
-menuGrid.innerHTML = items.map((item, idx) => 
-<article class="menu-card" data-id="${item.id}" style="transition-delay: ${idx * 0.06}s">
-<div class="card-img">
-<img src="\( {item.img}" alt=" \){item.name}" loading="lazy" />
-<div class="price-tag">\[ {item.price.toFixed(2)}</div>
-</div>
-<div class="card-body">
-<div class="card-category">${item.category}</div>
-<h3 class="card-title">${item.name}</h3>
-<p class="card-desc">${item.desc}</p>
-<div class="card-footer">
-<div class="rating">★ ${item.rating}</div>
-<button class="add-btn" onclick="addToCart(${item.id})">
-+ Add
-</button>
-</div>
-</div>
-</article>
-).join('');
+  const items = filter === 'all' ? menuItems : menuItems.filter(i => i.category === filter); 
 
-// Trigger animation
-requestAnimationFrame(() => {
-document.querySelectorAll('.menu-card').forEach(card => {
-card.classList.add('visible');
-});
-});
+  menuGrid.innerHTML = items.map((item, idx) => `
+    <article class="menu-card" data-id="${item.id}" style="transition-delay: ${idx * 0.06}s">
+      <div class="card-img">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" />
+        <div class="price-tag">$${item.price.toFixed(2)}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-category">${item.category}</div>
+        <h3 class="card-title">${item.name}</h3>
+        <p class="card-desc">${item.desc}</p>
+        <div class="card-footer">
+          <div class="rating">★ ${item.rating}</div>
+          <button class="add-btn" onclick="addToCart(${item.id})">
+            + Add
+          </button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  // Trigger animation
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.menu-card').forEach(card => {
+      card.classList.add('visible');
+    });
+  });
 }
 
 // Filter buttons
 document.querySelectorAll('.filter-btn').forEach(btn => {
-btn.addEventListener('click', () => {
-document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-btn.classList.add('active');
-currentFilter = btn.dataset.filter;
-renderMenu(currentFilter);
-});
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderMenu(currentFilter);
+  });
 });
 
 // Add to cart
 function addToCart(id) {
-const item = menuItems.find(i => i.id === id);
-if (!item) return;
-cart.push(item);
-cartCount.textContent = cart.length;
-showToast(${item.name} added to cart!);
+  const item = menuItems.find(i => i.id === id);
+  if (!item) return;
+  cart.push(item);
+  cartCount.textContent = cart.length;
+  showToast(`${item.name} added to cart!`);
 }
 
 // Toast
 function showToast(msg) {
-toastMsg.textContent = msg;
-toast.classList.add('show');
-setTimeout(() => toast.classList.remove('show'), 2600);
+  toastMsg.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2600);
 }
 
 // Header scroll effect
 window.addEventListener('scroll', () => {
-if (window.scrollY > 40) {
-header.classList.add('scrolled');
-} else {
-header.classList.remove('scrolled');
-}
+  if (window.scrollY > 40) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
 // Mobile menu
 menuToggle.addEventListener('click', () => {
-nav.classList.toggle('open');
+  nav.classList.toggle('open');
 });
 nav.querySelectorAll('a').forEach(a => {
-a.addEventListener('click', () => nav.classList.remove('open'));
+  a.addEventListener('click', () => nav.classList.remove('open'));
 });
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
-let current = '';
-sections.forEach(sec => {
-const top = sec.offsetTop - 120;
-if (window.scrollY >= top) current = sec.getAttribute('id');
-});
-nav.querySelectorAll('a').forEach(a => {
-a.classList.toggle('active', a.getAttribute('href') === #${current});
-});
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 120;
+    if (window.scrollY >= top) current = sec.getAttribute('id');
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+  });
 });
 
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', (e) => {
-e.preventDefault();
-showToast('Message sent! We’ll reply soon.');
-e.target.reset();
+  e.preventDefault();
+  showToast('Message sent! We’ll reply soon.');
+  e.target.reset();
 });
 
 // Cart button
-document.getElementById('cartBtn').addEventListener('click', () => {
-if (cart.length === 0) {
-showToast('Your cart is empty. Add something delicious!');
-} else {
-const total = cart.reduce((sum, i) => sum + i.price, 0).toFixed(2);
-showToast(Cart: ${cart.length} item(s) • \]{total});
-}
-});
-
-// Init
-renderMenu();
-</script>
-
+document.getElementById('cartBtn').addEventListener('click', () => {})
+  if (cart.length === 0) {
+    showToast('Your cart is empty. Add something delicious!');
+  } else {
+    const total = cart.reduce((sum, i) => sum + i.price, 0).toFixed(2);
+    showToast(`Cart: ${cart.length} items | Total: $${total}`);
+    }
+    </script>
 </body>
-</html> 
+</html>
