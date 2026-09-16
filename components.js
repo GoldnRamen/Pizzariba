@@ -3,7 +3,7 @@ class PizzaHeader extends HTMLElement {
         this.innerHTML = `
         <header>
             <nav class="navbar">
-                <a href="index.html" class="logo">Pizza <span>Bella</span></a>
+                <a href="index.html" class="logo">Pizzaribba</span></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
@@ -23,7 +23,7 @@ class PizzaFooter extends HTMLElement {
         <footer id="contact">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Pizza Bella</h3>
+                    <h3>Pizzaribba</h3>
                     <p>Serving the best authentic wood-fired pizzas in town.</p>
                 </div>
                 <div class="footer-col">
@@ -40,7 +40,7 @@ class PizzaFooter extends HTMLElement {
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Pizza Bella. All rights reserved.</p>
+                <p>&copy; 2026 Pizzaribba. All rights reserved.</p>
             </div>
         </footer>
         `;
